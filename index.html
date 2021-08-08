@@ -1,29 +1,4 @@
 <!DOCTYPE html>
-<html>
-<title> Sarantos Meglis | Sarantos Megklis </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-<meta name="google-site-verification" content="PSq_vEftqJDW-kFszP-icXw1vsNuNPuZJq4TP3asDRg" />
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=477zgJz20j">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=477zgJz20j">
-<link rel="icon" type="image/png" href="/favicon-32x32.png?v=477zgJz20j" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-194x194.png?v=477zgJz20j" sizes="194x194">
-<link rel="icon" type="image/png" href="/favicon-96x96.png?v=477zgJz20j" sizes="96x96">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=477zgJz20j" sizes="192x192">
-
-
-
-
-
 
 <script>
         function sm_dsb(cityName, k) {
@@ -45,20 +20,69 @@
                 document.getElementById(cityName).style.display = "block";
         }
 
-        function auto_lang(lang){
+        function auto_lang() {
 
+                if (navigator.appName == 'Netscape') {
+                        langType = navigator.language;
+                }
+                else {
+                        langType = navigator.browserLanguage;
+                }
+                
+                var title=document.getElementsByTagName("title")
 
+                if(langType=='el'){
+                  
+                   title[0].innerHTML="Σαράντος Μεγκλής | ΣΑΡΑΝΤΟΣ ΜΕΓΚΛΗΣ"
+                        
+                        
+                  var x = document.getElementsByClassName("en");
+                  for (i = 0; i < x.length; i++) {
+                        console.log(x[i]);
+                        x[i].style.display = "none";
+                  }
+
+                }else{
+                  
+                  title[0].innerHTML="Sarantos Meglis | Sarantos Megklis"
+                  var x = document.getElementsByClassName("el");
+                  for (i = 0; i < x.length; i++) {
+                        console.log(x[i]);
+                        x[i].style.display = "none";
+                  }
+                        
+                }
+
+                console.log(langType);
 
         }
 
 </script>
 
+<html>
+<title> Sarantos Meglis | Sarantos Megklis </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<meta name="google-site-verification" content="PSq_vEftqJDW-kFszP-icXw1vsNuNPuZJq4TP3asDRg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
 
 
-</script>
 
-<body>
+
+
+
+
+
+
+
+<body onload="auto_lang()">
         <div class="w3-display-container">
                 <div class="w3-container w3-content w3-padding-16">
 
@@ -69,9 +93,9 @@
                                         <div class="w3-container  ">
                                                 <img src="img.gif" style="width:30%;">
                                         </div>
-                                        <h1 style="display:none"> Σαράντος Π. Μεγκλής</h1>
-                                        <h1>Sarantos P. Megklis</h1   >
-                                        <p>DevOps Engineer, Java Developer @ avaca.eu</p>
+                                        <h1 class="el"> Σαράντος Π. Μεγκλής</h1>
+                                        <h1 class="en"> Sarantos P. Megklis</h1>
+                                        <p> DEV/OPS @ Avaca Technologies </p>
 
                                 </header>
                                 <div class="w3-bar ">
@@ -79,9 +103,15 @@
                                         <button class="w3-button w3-indigo w3-padding-large  bt  "
                                                 onclick="sm_dsb('CV', this)" style="display:none"><b>CV</b></button>
                                         <button class="w3-button w3-indigo w3-padding-large  bt "
-                                                onclick="sm_dsb('Contact', this)"><b>Επικοινωνία</b></button>
+                                                onclick="sm_dsb('Contact', this)">
+                                                <b class="el">επικοινωνία</b>
+                                                <b class="en">contact</b>
+                                        </button>
                                         <button class="w3-button w3-indigo w3-padding-large  bt "
-                                                onclick="sm_dsb('About', this)"><b>Σχετικά</b></button>
+                                                onclick="sm_dsb('About', this)">
+                                                <b class='el'>σχετικά</b>
+                                                <b class='en'>about</b>
+                                        </button>
 
                                 </div>
 
@@ -112,9 +142,9 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <footer class="w3-container w3-lime w3-tiny  ">
+                                <footer class="w3-container w3-grey w3-tiny  ">
 
-                                        copyright 2020 Sarantos Meglis
+                                        copyright 2021 Sarantos Meglis
                                 </footer>
                         </div>
                 </div>
