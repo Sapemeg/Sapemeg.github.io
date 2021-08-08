@@ -25,7 +25,26 @@
 
 
 	
-
+	<script>
+                function sm_dsb(cityName, k) {
+                    var i; 
+                    var j;
+                    var x = document.getElementsByClassName("nav");
+                    var y = document.getElementById("nvg");
+                    y.style.display = "block";
+                    var z = document.getElementsByClassName("bt");
+                    for(j=0; j< z.length ; j++){
+                            z[j].className=z[j].className.replace("w3-disabled", "");
+                        //z[j].className=z[j].className.replace("w3-white", "w3-blue");
+                   }
+                   k.className += "w3-disabled";	
+                   //k.className=k.className.replace(" w3-blue", "w3-white");
+                    for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";  
+                    }
+                    document.getElementById(cityName).style.display = "block";  
+                }
+                </script>
 
 
 </script>
